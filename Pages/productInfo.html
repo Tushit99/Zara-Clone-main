@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link rel="stylesheet" href="/styles/navBar-Style.css">
+  </head>
+  <style>
+      nav{
+          position: relative;
+          width: 90%;
+      }
+      #nav-bar-right{
+        justify-content: flex-end;
+      }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #container {
+      padding-top: 6%;
+      height: 900px;
+      padding-bottom: 10%;
+      margin-top: -4.7rem;
+    }
+
+    #leftbox {
+      width: 18%;
+      font-size: 16px;
+      /* padding-top: 10%; */
+      /* overflow:hidden; */
+
+      overflow-y: scroll;
+
+      scrollbar-width: thin;
+
+      padding-left: 12%;
+      margin-right: 9%;
+      /* border: 1px solid red; */
+      height: 69%;
+      line-height: 1.5rem;
+    }
+
+    #leftbox p,
+    span {
+      padding-right: 10px;
+      color: grey;
+      text-align: justify;
+    }
+    #leftbox::-webkit-scrollbar {
+      width: 2px; /* width of the entire scrollbar */
+    }
+
+    #leftbox::-webkit-scrollbar-track {
+      background: white; /* color of the tracking area */
+    }
+
+    #leftbox::-webkit-scrollbar-thumb {
+      background-color: black; /* color of the scroll thumb */
+      border-radius: 1px; /* roundness of the scroll thumb */
+      border: 1px solid black; /* creates padding around scroll thumb */
+    }
+    #rightbox {
+      display: flex;
+      width: 70%;
+      /* border: 1px solid red; */
+      height: 90%;
+      font: bolder;
+    }
+    img {
+      height: 70%;
+    }
+    #container {
+      display: flex;
+      /* border: 1px solid red; */
+    }
+    select {
+      border-style: none;
+    }
+    #rightbox > div + div {
+      /* border: 1px solid green; */
+      margin-left: 12%;
+      margin-right: 5%;
+      display: flex;
+      flex-direction: column;
+    }
+    #rightbox > div + div * {
+      padding: 3%;
+    }
+
+    button {
+      background-color: black;
+      color: white;
+      padding: 5%;
+      font-size: medium;
+    }
+    .striked{
+      text-decoration: line-through;
+      color: black;
+    }
+    .realprice{
+      padding: 5px;
+      width: fit-content;
+      background-color: yellow;
+      color: black;
+      font-weight: bold;
+    }
+    .head{
+      font-size: 1rem;
+      font-weight: normal;
+    }
+  </style>
+
+  <body>
+    <nav>
+        <div id="nav-bar-left">
+          <div id="hamburger">
+            <a href="../Components/navMenu.html"><img src="https://banner2.cleanpng.com/20180628/zaz/kisspng-computer-icons-hamburger-button-menu-new-menu-5b34724be5a1f0.5796308115301637879406.jpg" alt="hamburger" id="hamburger_icon"></a>
+          </div>
+          <div id="logo">
+            <a href="../Pages/home.html">
+              <img src="https://www.freepnglogos.com/uploads/zara-logo-png/zara-avrupa-logos-2020-desing--11.png" alt="favicon" id="favicon">
+            </a>         
+          </div>
+          </div>
+        </div>
+        <div id="nav-bar-right">
+          
+          <div id="nav-items">
+            <ul>
+              <li class="nav_item"><a class="navLinks" href=""></a> </li>
+              <li class="nav_item" id="help"><a class="navLinks" href="../Pages/help.html">HELP</a> </li>
+              <li class="nav_item" id="last-nav"><a class="navLinks" href="../Pages/cart.html">CART</a> </li>
+              <li class="nav_item" id="last-nav"><a class="navLinks" href="../Pages/login.html">SIGN OUT</a> </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div id="container">
+      <div id="leftbox">
+        <div>
+          <h2 class="head">MATERIALS, CARE AND ORIGIN</h2>
+        </div>
+        <div>
+          <h2 class="head">MATERIALS</h2>
+          <div>
+            <p>
+              We work with monitoring programmes to ensure compliance with
+              safety, health and quality standards for our products.
+            </p>
+
+            <p>
+              The Green to Wear 2.0 standard aims to minimise the environmental
+              impact of textile manufacturing. To that end, we have developed
+              Inditex’s The List programme, which helps guarantee both that
+              production processes are clean and that our garments are safe and
+              healthy
+            </p>
+          </div>
+          <div>
+            <span>OUTER SHELL</span>
+            <br />
+            <span>65% cotton · 35% polyester</span>
+            <br />
+            <span>LINING</span>
+            <br />
+            <span>100% cotton</span>
+            <br />
+          </div>
+        </div>
+        <div>
+          <h2 class="head">CARE</h2>
+          <div>
+            <p>Caring for your clothes is caring for the environment.</p>
+
+            <p>
+              To keep your jackets and coats clean, you only need to freshen
+              them up and go over them with a cloth or a clothes brush. If you
+              need to dry clean a garment, look for a dry cleaner that uses
+              technologies that are respectful of the environment.
+            </p>
+          </div>
+          <h2 class="head">ORIGIN</h2>
+          <div>
+            <p>
+              We work alongside our suppliers, workers, unions and international
+              bodies to develop a supply chain that respects and promotes human
+              rights, contributing to the United Nations Sustainable Development
+              Goals.
+            </p>
+
+            <p>
+              Additionally, thanks to an ongoing collaboration with our
+              suppliers, we have developed a tracking programme that allows us
+              to determine where and how our products are being made.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="rightbox"></div>
+    </div>
+  </body>
+</html>
+<script>
+  var ele = JSON.parse(localStorage.getItem("productpage"));
+  var cartarr=JSON.parse(localStorage.getItem("cartdata"))||[];
+
+  creattable(ele);
+  function creattable(ele) {
+    var bgdiv = document.createElement("div");
+    var td1 = document.createElement("div");
+    var img1 = document.createElement("img");
+
+    ///set img url
+    img1.setAttribute("src", ele.imageURL);
+
+    //middle box appending completed
+    td1.append(img1);
+    //second table
+
+    var td2 = document.createElement("div");
+    var head1 = document.createElement("h1");
+    //element name
+    head1.textContent = ele.productName;
+    //console.log(head1);
+    //set striked out price and normal price
+    var smrp = document.createElement("span");
+    smrp.textContent = ele.strikedPrice;
+    smrp.setAttribute("class","striked");
+
+    var pmrp = document.createElement("span");
+    pmrp.textContent = ele.price;
+    pmrp.setAttribute("class","realprice");
+    //
+    var p4 = document.createElement("p");
+    p4.textContent = "MRP incl. of all taxes";
+    p4.style.marginBottom = 0;
+    var p5 = document.createElement("p");
+    p5.style.marginBottom = 0;
+    p5.textContent = "Colour Natural | 0706/331";
+    //SELECT OPTION CREATION
+    var select1 = document.createElement("select");
+    var option1 = document.createElement("option");
+    option1.text = "S (UK S)";
+    select1.add(option1);
+    var option2 = document.createElement("option");
+    option2.text = "M (UK M)";
+    select1.add(option2);
+    var option3 = document.createElement("option");
+    option3.text = "L (UK L)";
+    select1.add(option3);
+    var option4 = document.createElement("option");
+    option4.text = "XL (UK XL)";
+    select1.add(option4);
+
+    //LAST 3 lines
+    var a1 = document.createElement("a");
+    a1.textContent = "Check in-store availability";
+    var a2 = document.createElement("a");
+    a2.textContent = "Delivery, Exchanges and Returns";
+    var a3 = document.createElement("a");
+    a3.textContent = "Delivery, Exchanges and Returns";
+
+    //add to cart button
+    var btn = document.createElement("button");
+    btn.textContent = "Add To Cart";
+    btn.addEventListener("click", function () {
+      cartarr.push(ele);
+      localStorage.setItem("cartdata", JSON.stringify(cartarr));
+      alert("Added To Cart");
+
+      // window.location.href = "cart.html"
+    });
+
+    //appending to rigthmost table
+
+    td2.append(head1, smrp, pmrp, p4, p5, select1, btn, a1, a2, a3);
+    document.querySelector("#rightbox").append(td1, td2);
+  }
+</script>

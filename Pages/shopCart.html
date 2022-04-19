@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Basket</title>
+    <link rel="stylesheet" href="../styles/navBar-Style.css">
+    <style>
+      nav{
+        position: relative;
+        width: 100vw;
+      }
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #container{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 3rem;
+      }
+
+      #imageflex{
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .productImage{
+        width: 200px;
+      }
+      #numOfCart{
+        text-align: right;
+        font-size: 0.8rem;
+        margin-bottom: 2rem;
+      }
+      .products_num{
+        color: grey;
+
+      }
+      .delivery{
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+      .delivery_2{
+        font-weight: bold;
+      }
+      .delivery_details{
+        font-size: 0.8rem;
+        margin-bottom: 0.2rem;
+      }
+      .delivery_desc{
+        font-size:0.8rem;
+        margin-bottom: 3rem;
+      }
+
+      .user{
+        color: grey;
+        margin: 0;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+      }
+      .checkout{
+            display: flex;   
+            background-color: white;    
+            justify-content: end;   
+            align-items: flex-end;   
+            width: 88%;   
+            position: fixed;  
+            bottom: 0px;  
+            padding: 10px;   
+        }
+        .checkout>div{
+            margin: 10px; 
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-small;
+            padding: 3px;
+        }
+        #payBOX{
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 10px 50px ;
+            margin: 3px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-small;
+        }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div id="nav-bar-left">
+        <div id="hamburger">
+          <a href="navMenu.html"><img src="https://banner2.cleanpng.com/20180628/zaz/kisspng-computer-icons-hamburger-button-menu-new-menu-5b34724be5a1f0.5796308115301637879406.jpg" alt="hamburger" id="hamburger_icon"></a>
+        </div>
+        <div id="logo">
+          <a href="home.html">
+            <img src="https://www.freepnglogos.com/uploads/zara-logo-png/zara-avrupa-logos-2020-desing--11.png" alt="favicon" id="favicon">
+          </a>     
+        </div>
+        </div>
+      </div>
+      <div id="nav-bar-right">
+        <div id="nav-items">
+          <ul>
+            <li class="nav_item" id="last-nav"><a class="navLinks" href="">MY ACCOUNT</a> </li>
+            <li class="nav_item" id="help"><a class="navLinks" href="Help/help.html">HELP</a> </li>  
+            <li class="nav_item" id="help"><a class="navLinks" href="home.html">GO TO HOME</a> </li>  
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="container">
+    </div>
+
+    <div class="checkout">
+      <div id="#total_price"></div>
+      <a href="../Components/success.html">
+        <div id="payBOX" onclick="paymentSuccess"> FINISH PAYMENT</div>
+      </a>
+        
+    </div>
+  </body>
+</html>
+
+<script>
+
+   var currentUser = JSON.parse(localStorage.getItem("KYC"));
+   console.log(currentUser);
+  
+
+  //Converting Prices to Number
+
+  
+  var box_1 = document.createElement("div");
+  var delivery_title = document.createElement("p");
+  delivery_title.setAttribute("class","delivery");
+  delivery_title.textContent = "DELIVERY";
+
+  var delivey_details = document.createElement("div");
+  delivey_details.setAttribute("class","delivery_details");
+  delivey_details.textContent = "STANDARD HOME SHIPPING · THURSDAY 27, JANUARY - TUESDAY 01, FEBRUARY";
+
+  var delivery_desc = document.createElement("div");
+  delivery_desc.setAttribute("class","delivery_desc");
+  delivery_desc.textContent = "TRANSPORT RESTRICTIONS MAY APPLY TO SOME AREAS";
+
+  //DELIVERY ADDRESS
+  
+
+  var userDetails = document.createElement("div");
+  userDetails.setAttribute("class","userDetails");
+
+  var user_details = document.createElement("p");
+  user_details.setAttribute("class","delivery");
+  user_details.textContent = "SHIPPING DETAILS";
+
+  var user_name = document.createElement("p");
+  user_name.setAttribute("class","user");
+  user_name.textContent = currentUser[0].username;
+
+  var address = document.createElement("p");
+  address.setAttribute("class","user");
+  address.textContent = currentUser[0].Address;
+
+  var address_2 = document.createElement("p");
+  address_2.setAttribute("class","user");
+  address_2.textContent = currentUser[0].Addaddress;
+
+  var pin = document.createElement("p");
+  pin.setAttribute("class","user");
+  pin.textContent = currentUser[0].Pincode;
+
+  var locality = document.createElement("p");
+  locality.setAttribute("class","user");
+  locality.textContent = currentUser[0].Locality;
+
+  var state = document.createElement("p");
+  state.setAttribute("class","user");
+  state.textContent = currentUser[0].State;
+
+  var phone = document.createElement("p");
+  phone.setAttribute("class","user");
+  phone.textContent = currentUser[0].Mobile;
+
+  var email = document.createElement("p");
+  email.setAttribute("class","user");
+  email.textContent = currentUser[0].Email;
+
+  var payment_method = document.createElement("p");
+  payment_method.setAttribute("class","delivery");
+  payment_method.textContent = "PAYMENT METHOD";
+
+  var payment_image = document.createElement("img");
+  payment_image.setAttribute("src","https://static.zara.net/static/images/payment/payment/upi.svg");
+
+  userDetails.append(user_details,user_name,address,address_2,pin,locality,state,phone,email);
+
+  box_1.append(delivery_title,delivey_details,delivery_desc,userDetails,payment_method,payment_image);
+
+ 
+  //CART INFO
+  var box_2 = document.createElement("div");
+
+   var cartItems = JSON.parse(localStorage.getItem("cartdata")) || [];
+  
+
+  //DOM
+  var box_2_1 = document.createElement("div");
+  
+  var delivery_2 = document.createElement("p");
+  delivery_2.setAttribute("class","delivery_2");
+  delivery_2.textContent = "DELIVERY THURSDAY 27, JANUARY - TUESDAY 01, FEBRUARY";
+
+  var numOfCartItems = document.createElement("p");
+  numOfCartItems.setAttribute("id","numOfCart");
+  var products_num = document.createElement("span");
+  products_num.setAttribute("class","products_num");
+  products_num.textContent = cartItems.length;
+  
+  var products_text = document.createElement("span");
+  products_text.setAttribute("class","products_num");
+  products_text.textContent = " PRODUCTS";
+
+  numOfCartItems.append(products_num,products_text);
+
+  var product_images = document.createElement("div");
+  product_images.setAttribute("id","imageflex")
+  cartItems.map(function (elem) {
+      var image = document.createElement("img");
+      image.setAttribute("src", elem.imageURL);
+      image.setAttribute("class", "productImage");
+      product_images.append(image);
+  });
+
+  box_2.append(delivery_2,numOfCartItems,product_images);
+
+  document.querySelector("#container").append(box_1,box_2);
+
+  var prices = [];
+    cartItems.map(function(elem){
+        var price = elem.price;
+        var bag = "";
+        for(var i=0; i<price.length; i++)
+        {
+            if(price[i] == "₹" || price[i]==",")
+            {
+                continue;
+            }
+            else if(price[i] == ".")
+            {
+                break;
+            }
+            else{
+                bag = bag+price[i];
+            }
+        }
+        prices.push(bag);
+    });
+
+    var prices = prices.map(Number);
+    
+    var total = 0;
+
+    for(var j=0; j<prices.length; j++)
+    {
+        total = total+prices[j];
+    }
+
+    // console.log(total);
+    var total_field = document.getElementById("#total_price").textContent = `₹ ${total}.00`;
+    console.log(total_field);
+
+</script>

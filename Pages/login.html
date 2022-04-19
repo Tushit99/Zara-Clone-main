@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZARA LOGIN</title>
+    <link rel="stylesheet" href="../styles/navBar-Style.css">
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #container{
+            display: flex;
+            width: 800px;
+            margin-left: 70px;
+            margin-top: 150px;
+        }
+        p{
+            font-size: 8.5px;
+            font-family: 'Neue-Helvetica', Helvetica, Arial, sans-serif;
+            font-weight: 600;
+        }
+        #login{
+            margin-right: 200px;
+        }
+        #mail,#pwd{
+            width: 250px;
+            height: 22px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            font-size: 10px;
+            font-weight: 500;
+            border-bottom: 1px solid;
+        }
+        #mail{
+            margin-top: 0px;
+        }
+        #sub,#create{
+            width: 250px;
+            height: 35px;
+            border: 0px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            margin-top: 20px;
+            font-size: 10px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        #p{
+            cursor: pointer;
+        }
+        #p1{
+            margin-bottom: 20px;
+        }
+        #p2{
+            margin-bottom: 81px;
+        }
+        #h2{
+            margin-bottom: 30px;
+        }
+        #about{
+            display: flex;
+        }
+        li{
+            font-size: 8px;
+            font-weight: 550;
+            margin-top: 5px;
+        }
+        ul{
+            list-style: none;
+        }
+        #about{
+            margin-top: 170px;
+            margin-left: 40px;
+        }
+        .head{
+            font-weight: bold;
+            font-size: 12px;
+        }
+        #copy{
+            display: flex;
+            width: 90%;
+            margin: auto;
+            margin-top: 30px;
+            justify-content: space-between;
+            text-align: right;
+        }
+        #last{
+            margin-top: -10px;
+        }
+        #bottom{
+            width: 90%;
+            margin: auto;
+            margin-top: 60px;
+            margin-bottom: 70px;
+            font-size: 12px;
+        }
+        #bottom > h6{
+            margin-top: 0px;
+            margin-bottom: 3px;
+        }
+        .form-control{
+            box-shadow: none;
+            border-radius: 0px;
+            border-style: none none solid none;
+            transition: all .5s;
+            padding-bottom: 0px;
+            padding-top: 10px;
+        }
+        .form-label{
+            font-size: 10px;
+            font-weight: bold;
+            color: gray;
+            display: block;
+            opacity: 1;
+            transform: translateY(-3em);
+            transform-origin: 0 0;
+            transition: all .3s;
+        }
+        .form-group:focus-within{
+            transform:scale(1.05,1.5)
+        }
+        .form-control:focus{
+            box-shadow: none;
+            outline: none;
+        }
+        .form-control:focus + .form-label, .form-control:not(:placeholder-shown)+.form-label{
+            transform: translateY(-4em) scale(0.8);
+        }
+        .form-control::placeholder{
+            color: transparent;
+        }
+        nav{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div id="nav-bar-left">
+          <div id="hamburger">
+            <a href="../Components/navMenu.html"><img src="https://banner2.cleanpng.com/20180628/zaz/kisspng-computer-icons-hamburger-button-menu-new-menu-5b34724be5a1f0.5796308115301637879406.jpg" alt="hamburger" id="hamburger_icon"></a>
+          </div>
+          <div id="logo">
+              <a href="../Pages/home.html">
+                <img src="https://www.freepnglogos.com/uploads/zara-logo-png/zara-avrupa-logos-2020-desing--11.png" alt="favicon" id="favicon">
+              </a>        
+          </div>
+          </div>
+        </div>
+        <div id="nav-bar-right">
+          <div id="search_bar">
+              <label class="navLabel" for="search">SEARCH</label>
+              <p id="search"></p>
+          </div>
+          <div id="nav-items">
+            <ul>
+              <li class="nav_item"><a class="navLinks" href="login.html">LOGIN</a> </li>
+              <li class="nav_item" id="help"><a class="navLinks" href="./help.html">HELP</a> </li>
+              <li class="nav_item" id="last-nav"><a class="navLinks" href=""></a> </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+
+    <div id="container">
+        <div id="login">
+            <h2 id="h1">LOG IN</h2>
+            <form action="">
+                <div class="form-group">
+                    <input type="text"  id="mail" placeholder="email"  autocomplete="off" class="form-control" required>
+                    <label for="" class="form-label">E-MAIL</label>
+                </div>
+                <div class="form-group">
+                    <input type="password"  id="pwd" placeholder="password" class="form-control" required>
+                    <label for="" class="form-label">PASSWORD</label>
+                </div>
+                <p id="p">HAVE YOU FORGOTTEN YOUR PASSWORD?</p>
+                <input type="submit" value="LOG IN" id="sub">
+            </form>
+        </div>
+
+        <div id="reg">
+            <h2 id="h2">REGISTER</h2>
+            <p id="p1">IF YOU STILL DON'T HAVE A ZARA.COM ACCOUNT, USE THIS OPTION TO ACCESS THE REGISTRATION FORM.</p>
+            <p id="p2">BY GIVING US YOUR DETAILS, PURCHASING IN ZARA.COM WILL BE FASTER AND AN ENJOYABLE EXPERIENCE.</p>
+
+            <button id="create">CREATE ACCOUNT</button>
+        </div>
+    </div>
+
+    <div id="about">
+        <div>
+            <ul>
+                <li class="head">HELP</li>
+                <li>SHOP AT ZARA.COM</li>
+                <li>PRODUCT</li>
+                <li>PAYMENT</li>
+                <li>SHIPPING</li>
+                <li>EXCHANGING AND RETURNS</li>
+                <li>SHOPS AND COMPANY</li>
+                <li>CLOTHES COLLECTION PROGRAMME</li>
+                <li>MY ACCOUNT</li>
+            </ul>
+        </div>
+
+        <div>
+            <ul>
+                <li class="head">FOLLOW US</li>
+                <li>NEWS LETTER</li>
+                <li>TIKTOK</li>
+                <li>INSTAGRAM</li>
+                <li>FACEBOOK</li>
+                <li>TWITTER</li>
+                <li>PINTEREST</li>
+                <li>YOUTUBE</li>
+            </ul>
+        </div>
+
+        <div>
+            <ul>
+                <li class="head">COMPANY</li>
+                <li>ABOUT US</li>
+                <li>OFFICES</li>
+                <li>STORES</li>
+                <li>WORK WITH US</li>
+            </ul>
+        </div>
+
+        <div>
+            <ul>
+                <li class="head">POLICES</li>
+                <li>PRIVACY POLICY</li>
+                <li>PURCHASE CONDITIONS</li>
+                <li>COOKIES SETTINGS</li>
+            </ul>
+        </div>
+    </div>
+    <hr style="width: 90%;">
+
+    <div id="copy">
+        <h6>INDIA</h6>
+        <div>
+            <h6>ENGLISH</h6>
+            <p id="last">© ALL RIGHTS RESERVED</p>
+        </div>
+    </div>
+
+    <div id="bottom">
+        <h6>NAME AND ADDRESS OF THE MANUFACTURER:</h6>
+        <h6>INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.)</h6>
+        <h6>AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</h6>
+    </div>
+</body>
+</html>
+
+<script>
+    
+    var regUsers=JSON.parse(localStorage.getItem("USERSDATA"));
+    var cartData = [];
+    localStorage.setItem("cartdata",JSON.stringify(cartData));
+
+    document.querySelector("form").addEventListener("submit",loginaccount);
+
+    function loginaccount(event)
+    {
+        event.preventDefault();
+
+        var email = document.querySelector("#mail").value;
+        var password = document.querySelector("#pwd").value;
+
+        var count = 0;
+        for(var i=0; i<regUsers.length; i++)
+        {
+            if(regUsers[i].Email == email && regUsers[i].Password == password)
+            {
+                alert("LOGIN SUCCESSFUL");
+                var customer=[];
+                cobj={"Email":regUsers[i].Email,"Password":regUsers[i].Password,"username":regUsers[i].username,"Pincode":regUsers[i].Pincode,"Address":regUsers[i].Address,"Addaddress":regUsers[i].Addaddress,"Locality":regUsers[i].Locality,"State":regUsers[i].State, "Prefix":regUsers[i].Prefix, "Mobile":regUsers[i].Mobile}
+                customer.push(cobj);
+                localStorage.setItem("KYC",JSON.stringify(customer))
+                window.location.href = "home.html";
+
+            }
+            else{
+                count++;
+            }
+        }
+
+        if(count == regUsers.length)
+        {
+            alert("Wrong Details")
+        }
+    }
+
+    document.getElementById("create").addEventListener("click",regPage);
+
+    function regPage(){
+        window.location.href = "signUp.html"
+    }
+</script>

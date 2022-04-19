@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Bag</title>
+    <link rel="stylesheet" href="../styles/navBar-Style.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #cartContainer{
+            display: flex;
+            height: 450px;
+            margin-left: 30px;
+            overflow-x: scroll;
+        }
+        #boxes{
+            min-width:390px;
+            margin-right: 50px;
+        }
+        #avatar{
+            height: 430px;
+            margin-left: -10px;
+        }
+        #item{
+            display: flex;
+            margin-left: 20px;
+        }
+        #del{
+            margin-top: 180px;
+            margin-left: 10px;
+            font-size: 12px;
+            color: grey;
+            cursor: pointer;
+        }
+        #cost{
+            margin-top: 150px;
+            margin-left: 10px;
+            font-size: 12px;
+            position: relative;
+            color: grey;
+        }
+        #productName,#ref{
+            margin-left: 10px;
+            font-size: 10px;
+            color: rgb(49, 49, 49);
+            margin-bottom: 0px;
+        }
+        h3{
+            margin-left: 30px;
+        }
+        #cartContainer2{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            margin-top: 0px;
+            margin-bottom: -50px;
+            width: 98%;
+        }
+        #total{
+            display: flex;
+            color: black;
+            font-size: 12px;
+            font-weight: 550;
+            margin-bottom: -20px;
+        }
+        #final{
+            text-align: right;
+            font-size: 10px;
+            color: grey;
+            margin-right: 30px;
+            margin-top: 20px;
+            
+        }
+        #continue{
+            background-color: black;
+            color: white;
+            font-weight: 550;
+            border: none;
+            width: 250px;
+            height: 35px;
+            margin-left: 10px;
+            margin-right: 5px;
+            margin-top: 33px;
+            cursor: pointer;
+        }
+        #total-amount{
+            margin-left: 20px;
+        }
+        h3{
+            margin-top: 150px;
+        }
+        nav{
+            margin-top: -140px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="nav-bar-left">
+          <div id="hamburger">
+            <a href="../Components/navMenu.html"><img src="https://banner2.cleanpng.com/20180628/zaz/kisspng-computer-icons-hamburger-button-menu-new-menu-5b34724be5a1f0.5796308115301637879406.jpg" alt="hamburger" id="hamburger_icon"></a>
+          </div>
+          <div id="logo">
+              <a href="../Pages/home.html">
+                <img src="https://www.freepnglogos.com/uploads/zara-logo-png/zara-avrupa-logos-2020-desing--11.png" alt="favicon" id="favicon">
+              </a>       
+          </div>
+          </div>
+        </div>
+        <div id="nav-bar-right">
+          <div id="nav-items">
+            <ul>
+              <li class="nav_item" id="last-nav"><a class="navLinks" href="login.html">LOGOUT</a> </li>
+              <li class="nav_item" id="help"><a class="navLinks" href="help.html">HELP</a> </li>  
+              <li class="nav_item" id="help"><a class="navLinks" href="home.html">GO HOME</a> </li>  
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <h3>SHOPPING BAG</h3>
+    <div id="cartContainer"></div>
+
+    <div id="cartContainer2">
+        <div id="final">
+            <div id="total">
+                <p>TOTAL</p>
+                <p id="total-amount"></p>
+            </div>
+            <p style="margin-bottom: 0px;">INCLUDING GST</p>
+            <p style="margin-top: 0px;">* EXCL SHIPPING COST</p>
+        </div>
+        <div>
+            <a href="Shipping-Method.html"><button id="continue">CONTINUE</button></a>
+            
+        </div>
+    </div>
+
+    <div id="about">
+        <div>
+            <ul>
+                <li class="head">HELP</li>
+                <li>SHOP AT ZARA.COM</li>
+                <li>PRODUCT</li>
+                <li>PAYMENT</li>
+                <li>SHIPPING</li>
+                <li>EXCHANGING AND RETURNS</li>
+                <li>SHOPS AND COMPANY</li>
+                <li>CLOTHES COLLECTION PROGRAMME</li>
+                <li>MY ACCOUNT</li>
+            </ul>
+        </div>
+
+        <div>
+            <ul>
+                <li class="head">FOLLOW US</li>
+                <li>NEWS LETTER</li>
+                <li>TIKTOK</li>
+                <li>INSTAGRAM</li>
+                <li>FACEBOOK</li>
+                <li>TWITTER</li>
+                <li>PINTEREST</li>
+                <li>YOUTUBE</li>
+            </ul>
+        </div>
+
+        <div>
+            <ul>
+                <li class="head">COMPANY</li>
+                <li>ABOUT US</li>
+                <li>OFFICES</li>
+                <li>STORES</li>
+                <li>WORK WITH US</li>
+            </ul>
+        </div>
+
+        <div>
+            <ul>
+                <li class="head">POLICES</li>
+                <li>PRIVACY POLICY</li>
+                <li>PURCHASE CONDITIONS</li>
+                <li>COOKIES SETTINGS</li>
+            </ul>
+        </div>
+    </div>
+    <hr style="width: 90%;">
+
+    <div id="copy">
+        <h6>INDIA</h6>
+        <div>
+            <h6>ENGLISH</h6>
+            <p id="last" style="font-size: 12px;">© ALL RIGHTS RESERVED</p>
+        </div>
+    </div>
+
+    <div id="bottom">
+        <h6>NAME AND ADDRESS OF THE MANUFACTURER:</h6>
+        <h6>INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.)</h6>
+        <h6>AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</h6>
+    </div>
+</body>
+</html>
+
+<script>
+
+    var product = JSON.parse(localStorage.getItem("cartdata")) || [];
+    displayData(product);
+
+    function deleteTask(index)
+    {
+        document.querySelector("#cartContainer").innerHTML = "";
+
+
+        product.splice(index,1);
+        
+        localStorage.setItem("cartdata",JSON.stringify(product));
+        displayData(product);
+    }
+
+    function displayData(product)
+    {
+        product.map(function(elem,index){
+            var div = document.createElement("div");
+            div.setAttribute("id","boxes")
+            
+            
+            var div2 = document.createElement("div");
+            div2.setAttribute("id","item");
+            
+            var image = document.createElement("img");
+            image.setAttribute("src",elem.imageURL);
+            image.setAttribute("id","avatar");
+    
+            var div3 = document.createElement("div");
+    
+            var ref = document.createElement("p");
+            ref.textContent = "REF. | 4065/412";
+            ref.setAttribute("id","ref");
+    
+            var name = document.createElement("p");
+            name.textContent = elem.productName;
+            name.setAttribute("id","productName");
+    
+    
+            var price = document.createElement("p");
+            price.textContent = elem.price;
+            price.setAttribute("id","cost");
+    
+    
+            var del = document.createElement("p");
+            del.textContent = "DELETE";
+            del.setAttribute("id","del");
+            del.addEventListener("click",function(){
+                deleteTask(index);
+            })
+    
+            div3.append(ref,name,price,del);
+    
+            div2.append(image,div3);
+    
+            div.append(div2);
+    
+            document.querySelector("#cartContainer").append(div);
+        });
+
+        var prices = [];
+    product.map(function(elem){
+        var price = elem.price;
+        var bag = "";
+        for(var i=0; i<price.length; i++)
+        {
+            if(price[i] == "₹" || price[i]==",")
+            {
+                continue;
+            }
+            else if(price[i] == ".")
+            {
+                break;
+            }
+            else{
+                bag = bag+price[i];
+            }
+        }
+        prices.push(bag);
+    });
+
+    var prices = prices.map(Number);
+    
+    var total = 0;
+
+    for(var j=0; j<prices.length; j++)
+    {
+        total = total+prices[j];
+    }
+
+    // console.log(total);
+
+    document.querySelector("#total-amount").textContent = `₹ ${total}.00`;
+    }
+
+</script>
